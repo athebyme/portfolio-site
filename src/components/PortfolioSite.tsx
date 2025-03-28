@@ -278,7 +278,7 @@ const PortfolioSite: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Профиль</h3>
-                                    <p className="text-gray-400">
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text">
                                         Стажер-разработчик Backend с сильным интересом к созданию масштабируемых сервисов и опытом работы с Go, C# и Python.
                                     </p>
                                 </div>
@@ -290,11 +290,11 @@ const PortfolioSite: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Образование</h3>
-                                    <p className="text-gray-400">
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text">
                                         Университет ИТМО - Software Engineer<br />
                                         3 курс, 2022-2026
                                     </p>
-                                    <p className="text-gray-500 mt-2">
+                                    <p className="text-gray-500 mt-2 whitespace-pre-wrap select-text">
                                         Учебный центр вычислительной техники<br />
                                         Победитель ежегодных олимпиад, 2016-2021
                                     </p>
@@ -326,7 +326,7 @@ const PortfolioSite: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Местоположение</h3>
-                                    <p className="text-gray-400">Санкт-Петербург, Россия</p>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text">Санкт-Петербург, Россия</p>
                                 </div>
                             </div>
 
@@ -336,53 +336,49 @@ const PortfolioSite: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Дата рождения</h3>
-                                    <p className="text-gray-400">14 Августа 2004</p>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text">14 Августа 2004</p>
                                 </div>
                             </div>
 
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 bg-gray-900 rounded-lg">
-                                    <Phone size={24} className="text-gray-400" />
+                            <a href="tel:+79052570161" className="flex items-start space-x-4 group hover:bg-gray-900 hover:bg-opacity-30 transition-colors p-2 rounded-lg -mx-2">
+                                <div className="p-3 bg-gray-900 rounded-lg group-hover:bg-gray-800 transition-colors">
+                                    <Phone size={24} className="text-gray-400 group-hover:text-white transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2">Телефон</h3>
-                                    <p className="text-gray-400">+7 (905) 257 01 61</p>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">Телефон</h3>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text group-hover:text-gray-300 transition-colors">+7 (905) 257 01 61</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 bg-gray-900 rounded-lg">
-                                    <Mail size={24} className="text-gray-400" />
+                            <a href="mailto:ab@athebyme.ru" className="flex items-start space-x-4 group hover:bg-gray-900 hover:bg-opacity-30 transition-colors p-2 rounded-lg -mx-2">
+                                <div className="p-3 bg-gray-900 rounded-lg group-hover:bg-gray-800 transition-colors">
+                                    <Mail size={24} className="text-gray-400 group-hover:text-white transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2">Email</h3>
-                                    <p className="text-gray-400">ab@athebyme.ru</p>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">Email</h3>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text group-hover:text-gray-300 transition-colors">ab@athebyme.ru</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 bg-gray-900 rounded-lg">
-                                    <Github size={24} className="text-gray-400" />
+                            <a href="https://github.com/athebyme" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4 group hover:bg-gray-900 hover:bg-opacity-30 transition-colors p-2 rounded-lg -mx-2">
+                                <div className="p-3 bg-gray-900 rounded-lg group-hover:bg-gray-800 transition-colors">
+                                    <Github size={24} className="text-gray-400 group-hover:text-white transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2">GitHub</h3>
-                                    <a href="https://github.com/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                        github.com/athebyme
-                                    </a>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">GitHub</h3>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text group-hover:text-gray-300 transition-colors">github.com/athebyme</p>
                                 </div>
-                            </div>
+                            </a>
 
-                            <div className="flex items-start space-x-4">
-                                <div className="p-3 bg-gray-900 rounded-lg">
-                                    <MessageSquare size={24} className="text-gray-400" />
+                            <a href="https://t.me/athebyme" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4 group hover:bg-gray-900 hover:bg-opacity-30 transition-colors p-2 rounded-lg -mx-2">
+                                <div className="p-3 bg-gray-900 rounded-lg group-hover:bg-gray-800 transition-colors">
+                                    <MessageSquare size={24} className="text-gray-400 group-hover:text-white transition-colors" />
                                 </div>
                                 <div>
-                                    <h3 className="text-xl font-bold mb-2">Telegram</h3>
-                                    <a href="https://t.me/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
-                                        @athebyme
-                                    </a>
+                                    <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">Telegram</h3>
+                                    <p className="text-gray-400 whitespace-pre-wrap select-text group-hover:text-gray-300 transition-colors">@athebyme</p>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     </div>
                 </div>
