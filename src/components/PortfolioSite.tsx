@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Code, Database, Server, Terminal, User, Github, Mail, Phone, MapPin, Award, Calendar, MessageSquare } from 'lucide-react';
+import { Code, Database, Server, Terminal, User, Github, Mail, Phone, MapPin, Award, Calendar, MessageSquare, ExternalLink } from 'lucide-react';
 
 // Интерфейс для цветов технологий
 interface TechColorMap {
@@ -110,42 +110,48 @@ const PortfolioSite: React.FC = () => {
             title: "Сервис мониторинга статистики продавца",
             description: "Система для анализа и отслеживания показателей продаж на маркетплейсах",
             tech: ["Go", "Telegram API", "Postgres"],
-            icon: <Database size={24} />
+            icon: <Database size={24} />,
+            link: "https://github.com/athebyme/marketplace-monitoring"
         },
         {
             year: "2024",
             title: "Сервис работы с маркетплейсами",
             description: "Платформа для управления товарами и продажами через различные маркетплейсы",
             tech: ["Go", "Postgres"],
-            icon: <Server size={24} />
+            icon: <Server size={24} />,
+            link: "https://github.com/athebyme/marketplace-service"
         },
         {
             year: "2022-2023",
             title: "Парсер товаров для загрузки на маркетплейсы",
             description: "Инструмент для автоматического сбора данных о товарах и загрузки на Wildberries и Ozon",
             tech: ["Python", "Google Cloud API", "Ozon API", "KNN"],
-            icon: <Code size={24} />
+            icon: <Code size={24} />,
+            link: "https://github.com/athebyme/marketplace-parser"
         },
         {
             year: "2023",
             title: "Система работы банкомата с Postgres",
             description: "Симуляция банкомата с надежным сохранением данных и гексагональной архитектурой",
             tech: ["C#", "ООП", "SOLID + GRASP", "Гексагональная архитектура", "Postgres", "XUnit"],
-            icon: <Terminal size={24} />
+            icon: <Terminal size={24} />,
+            link: "https://github.com/athebyme/atm-system"
         },
         {
             year: "2023",
             title: "Оболочка файловой системы CLI",
             description: "Интерфейс командной строки для работы с файловой системой",
             tech: ["C#", "ООП", "SOLID + GRASP", "Moq", "XUnit"],
-            icon: <Terminal size={24} />
+            icon: <Terminal size={24} />,
+            link: "https://github.com/athebyme/cli-filesystem"
         },
         {
             year: "2023",
             title: "Система распределения сообщений",
             description: "Платформа для маршрутизации и обработки сообщений",
             tech: ["C#", "ООП", "SOLID + GRASP", "Crayon", "Moq", "XUnit"],
-            icon: <MessageSquare size={24} />
+            icon: <MessageSquare size={24} />,
+            link: "https://github.com/athebyme/message-distributor"
         }
     ];
 
@@ -332,7 +338,21 @@ const PortfolioSite: React.FC = () => {
                                 </div>
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">GitHub</h3>
-                                    <p className="text-gray-400">github.com/athebyme</p>
+                                    <a href="https://github.com/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        github.com/athebyme
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div className="flex items-start space-x-4">
+                                <div className="p-3 bg-gray-900 rounded-lg">
+                                    <MessageSquare size={24} className="text-gray-400" />
+                                </div>
+                                <div>
+                                    <h3 className="text-xl font-bold mb-2">Telegram</h3>
+                                    <a href="https://t.me/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                        @athebyme
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -363,7 +383,14 @@ const PortfolioSite: React.FC = () => {
                                     <span className="text-gray-500 text-sm">{project.year}</span>
                                 </div>
 
-                                <h3 className="text-xl font-bold mb-2 group-hover:text-white transition-colors">{project.title}</h3>
+                                <div className="flex items-center mb-2">
+                                    <h3 className="text-xl font-bold mr-2 group-hover:text-white transition-colors">{project.title}</h3>
+                                    {project.link && (
+                                        <a href={project.link} target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
+                                            <ExternalLink size={16} />
+                                        </a>
+                                    )}
+                                </div>
                                 <p className="text-gray-400 mb-4">{project.description}</p>
 
                                 <div className="flex flex-wrap gap-2">
@@ -388,19 +415,36 @@ const PortfolioSite: React.FC = () => {
                         <span className="text-gray-500">.БРЮХОВ</span>
                     </div>
 
-                    <p className="text-gray-500 mb-4">Стажер-разработчик Backend • Санкт-Петербург</p>
+                    <p className="text-gray-500 mb-4">Разработчик Backend • Санкт-Петербург</p>
 
-                    <div className="flex justify-center space-x-4">
-                        <a href="https://github.com/athebyme" className="text-gray-400 hover:text-white transition-colors">
-                            <Github size={20} />
+                    <div className="flex justify-center space-x-6 mb-6">
+                        <a href="https://github.com/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors group">
+                            <div className="flex flex-col items-center">
+                                <Github size={24} className="mb-2" />
+                                <span className="text-sm group-hover:underline">GitHub</span>
+                            </div>
                         </a>
-                        <a href="mailto:ab@athebyme.ru" className="text-gray-400 hover:text-white transition-colors">
-                            <Mail size={20} />
+                        <a href="https://t.me/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors group">
+                            <div className="flex flex-col items-center">
+                                <MessageSquare size={24} className="mb-2" />
+                                <span className="text-sm group-hover:underline">Telegram</span>
+                            </div>
                         </a>
-                        <a href="tel:+79052570161" className="text-gray-400 hover:text-white transition-colors">
-                            <Phone size={20} />
+                        <a href="mailto:ab@athebyme.ru" className="text-gray-400 hover:text-white transition-colors group">
+                            <div className="flex flex-col items-center">
+                                <Mail size={24} className="mb-2" />
+                                <span className="text-sm group-hover:underline">Email</span>
+                            </div>
+                        </a>
+                        <a href="tel:+79052570161" className="text-gray-400 hover:text-white transition-colors group">
+                            <div className="flex flex-col items-center">
+                                <Phone size={24} className="mb-2" />
+                                <span className="text-sm group-hover:underline">Телефон</span>
+                            </div>
                         </a>
                     </div>
+
+                    <p className="text-gray-600 text-sm">© {new Date().getFullYear()} - Антон Брюхов</p>
                 </div>
             </footer>
 
