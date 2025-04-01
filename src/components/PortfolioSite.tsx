@@ -136,7 +136,7 @@ const PortfolioSite: React.FC = () => {
             year: "2025",
             title: "Сервис мониторинга статистики продавца",
             description: "Система для анализа и отслеживания показателей продаж на маркетплейсах",
-            tech: ["Go", "Telegram API", "Postgres"],
+            tech: ["Go", "Telegram API", "Postgres", "Redis", "Docker"],
             icon: <Database size={24} />,
             link: "https://github.com/athebyme/marketplace-monitoring"
         },
@@ -144,7 +144,7 @@ const PortfolioSite: React.FC = () => {
             year: "2024",
             title: "Сервис работы с маркетплейсами",
             description: "Платформа для управления товарами и продажами через различные маркетплейсы",
-            tech: ["Go", "Postgres"],
+            tech: ["Go", "Postgres", "Kafka", "Redis", "Docker"],
             icon: <Server size={24} />,
             link: "https://github.com/athebyme/marketplace-service"
         },
@@ -279,7 +279,7 @@ const PortfolioSite: React.FC = () => {
                                 <div>
                                     <h3 className="text-xl font-bold mb-2">Профиль</h3>
                                     <p className="text-gray-400 whitespace-pre-wrap select-text">
-                                        Стажер-разработчик Backend с сильным интересом к созданию масштабируемых сервисов и опытом работы с Go, C# и Python.
+                                        Разработчик Backend с сильным интересом к созданию масштабируемых сервисов и опытом работы с Go, C# и Python.
                                     </p>
                                 </div>
                             </div>
@@ -439,7 +439,7 @@ const PortfolioSite: React.FC = () => {
                         <span className="text-gray-500">.БРЮХОВ</span>
                     </div>
 
-                    <p className="text-gray-500 mb-4">Стажер-разработчик Backend • Санкт-Петербург</p>
+                    <p className="text-gray-500 mb-4">Разработчик Backend • Санкт-Петербург</p>
 
                     <div className="flex justify-center space-x-6 mb-6">
                         <a href="https://github.com/athebyme" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors group">
